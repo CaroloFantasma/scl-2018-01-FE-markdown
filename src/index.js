@@ -4,6 +4,7 @@ let fs = require('fs');
 let path = require('path');
 const mdLinks = require('./lib/md-links');
 
+
 let dirPath = process.argv[2];
 let dirBuf = Buffer.from(dirPath);
 let fileType = '.' + process.argv[3]; // Extensión del archivo
