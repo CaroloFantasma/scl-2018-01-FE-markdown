@@ -2,12 +2,15 @@
 
 let fs = require('fs');
 let path = require('path');
+const mdLinks = require('./lib/md-links');
+const Marked = require('marked');
 
 //  Ruta actual del directorio (Current Working Directory)
 let currentDirectory = process.cwd();
 console.log(`Current working directory: ${process.cwd()}`);
 let cwdToString = Buffer.from(currentDirectory);
 
+//  Lee los contenidos del directorio
 fs.readdir(cwdToString, (error, files) => {
   files.forEach(file => {
     console.log(file);
@@ -18,7 +21,7 @@ fs.readdir(cwdToString, (error, files) => {
         console.log(files[i]);
 
         //  Leer contenido del archivo
-        fs.readFile(files[i], 'utf8', (err, data) => { 
+        fs.readFile(files[i], 'utf8', (err, data) => {
           if (err) throw err;
           console.log(data);
         });
