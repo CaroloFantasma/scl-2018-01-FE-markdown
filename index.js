@@ -24,7 +24,7 @@ fs.readdir(cwdToString, (error, files) => {
           mdLinks(data).forEach(element => {
             console.log(file.cyan, element.href.green, element.text.blue);
             fetch(`${element.href}`, {validate: true}).then((response) => {
-              console.log(response.url.magenta, response.status.red, response.statusText.red);        
+              console.log(response.url.magenta, response.status.red, response.statusText.red); 
             });
           });
         };
@@ -33,4 +33,5 @@ fs.readdir(cwdToString, (error, files) => {
   });
 });
 
-     
+// let lines = fileData.split("\n");
+  
