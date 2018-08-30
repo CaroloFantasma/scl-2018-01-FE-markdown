@@ -1,12 +1,13 @@
 const assert = require('chai').assert;
 global.window = global;
-require('md-examples');
+require('../lib/md-links.js');
 
 //  Validar función
-describe('Calcular tarifa', () => { //  Describe lo que habrá dentro de cada función
-  describe('calculate', () => {
-    it('debería ser una función', () => {
-      assert.equal(typeof calculate, 'function'); 
+describe('Validar extensión del archivo', () => { //  Describe lo que habrá dentro de cada función
+  describe('files', () => {
+    it('path.extname(file).toLowerCase() === ".md"', () => {
+      assert.equal(('.md'), true);
+      assert.equal(('.txt'), false); 
     });
   });
 });

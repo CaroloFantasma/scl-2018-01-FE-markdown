@@ -46,7 +46,7 @@
   "author": "Carolina Lastra",
   "license": "ISC",
   "bin": {
-    "md-links": "index.js"
+    "md-links": "./lib/md-links"
   },
   "bugs": {
     "url": "https://github.com/CaroloFantasma/scl-2018-01-FE-markdown/issues"
