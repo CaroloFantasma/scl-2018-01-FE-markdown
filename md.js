@@ -19,7 +19,7 @@ const mdLinks = function fileReadingPromise() {
   fs.readdir(cwdToString, (error, files) => {
     let currentDirectory = process.cwd();
     let cwdToString = Buffer.from(currentDirectory);
-    options.validate = process.argv[3];
+    options.validate = process.argv[2];
     console.log(`Current working directory: ${process.cwd()}`.magenta);
     console.log('process.argv:' + JSON.stringify(process.argv));
 
