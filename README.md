@@ -7,13 +7,13 @@ Markdown Links es una librería de Node.js que permite al usuario, por medio de 
 ´´´
 Para instalar esta librería debe ejecutar los siguientes comandos en la terminal:
 
-#####Instalación de marked:
+##### Instalación de marked:
 
 * $npm install --save marked
 
-#####Instalación de marked
+##### Instalación de marked
 ´´´
-*$npm install node-fetch --save
+* $npm install node-fetch --save
 
 #Documentación utilizada para crear este proyecto:
 
