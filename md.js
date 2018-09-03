@@ -22,36 +22,34 @@ const mdLinks = function fileReading(relativeToAbsolute) {
 
 
     //  Lee los contenidos del directorio
-    fs.readdir(cwdToString, (error, files) => {
-      // Selecciona los archivos con extensión .md
-      files.forEach(relativeToAbsolute => {
-        if (path.extname(relativeToAbsolute).toLowerCase() === '.md') {
-          // Leer contenido del archivo
-          fs.readFile(relativeToAbsolute, 'utf8', (err, data) => {
-            if (err) {
-              console.log(error);
-            } else {
-              let getLine = (data).split('\n').map((element, index) => linksMd(element, index + 1));
-              if (getLine !== null) {
-                getLineNumber = getLine.filter(element => element.length !== 0);
-                let lineNumber = getLineNumber.reduce((firstValue, secondValue) => firstValue.concat(secondValue), []);
-                lineNumber.forEach(element => {
-                  if (options.validate === '--validate') {
-                    fetch(`${element.href}`).then((response) => {
-                      console.log('Ruta:' + response.url.magenta, response.status, response.statusText.red);
-                    }).catch((err) => {
-                      console.error('link no encontrado ' + err);
-                    });
-                  } else {
-                    console.log('Archivo:' + relativeToAbsolute.cyan, 'Link:' + element.href.green, 'Texto:' + element.text.blue, 'Línea:' + element.getLine);
-                  };
+    // fs.readdir(cwdToString, (error, files) => {
+    // Selecciona los archivos con extensión .md
+    // files.forEach(relativeToAbsolute => {
+    if (path.extname(relativeToAbsolute).toLowerCase() === '.md') {
+      // Leer contenido del archivo
+      fs.readFile(relativeToAbsolute, 'utf8', (err, data) => {
+        if (error) {
+          console.log(error);
+        } else {
+          let getLine = data.split('\n').map((element, index) => linksMd(element, index + 1));
+          if (getLine !== null) {
+            getLineNumber = getLine.filter(element => element.length !== 0);
+            let lineNumber = getLineNumber.reduce((firstValue, secondValue) => firstValue.concat(secondValue), []);
+            lineNumber.forEach(element => {
+              if (options.validate === '--validate') {
+                fetch(`${element.href}`).then((response) => {
+                  console.log('Ruta:' + response.url.magenta, response.status, response.statusText.red);
+                }).catch((err) => {
+                  console.error('No se pudo encontrar ningún link' + error);
                 });
+              } else {
+                console.log('Archivo:' + relativeToAbsolute.cyan, 'Link:' + element.href.green, 'Texto:' + element.text.blue, 'Línea:' + element.getLine);
               };
-            };
-          });
+            });
+          };
         };
       });
-    });
+    };
   });
 };
 
