@@ -38,13 +38,14 @@ Para implementar esta librería debes ingresar el siguiente comando:
 
 ## Uso
 
-####Para ejecutar la librería deber usar los siguientes comandos:
+#### Para ejecutar la librería deber usar los siguientes comandos:
 
 `$ md-links <ruta-de-archivo> o $ mdlinks <nombre-de-archivo.md>`
 
 Ejemplo de uso: 
 
 ` md-links $C:\Users\CaroloFantasma\Documents\scl-2018-01-FE-markdown\README.md`
+
 ` /posicionarse-en-la-ruta-del-archivo/ md-links README.md`
 
 Resultado md-links:
@@ -58,6 +59,7 @@ Resultado md-links:
 Ejemplo de uso: 
 
 ` md-links $C:\Users\CaroloFantasma\Documents\scl-2018-01-FE-markdown\README.md --validate`
+
 ` /posicionarse-en-la-ruta-del-archivo/ md-links README.md --validate`
 
 Resultado --validate:
@@ -76,7 +78,7 @@ Markdown-links-finder se encuentra en su versión 1.0.0, que incluye:
 - Texto de links
 - Validación de links con --validate
 
-##Documentación utilizada para crear este proyecto:
+## Documentación utilizada para crear este proyecto:
 
 - [NPM](https://docs.npmjs.com/getting-started/what-is-npm)
 - [Publicar packpage](https://docs.npmjs.com/getting-started/publishing-npm-packages)
@@ -101,11 +103,11 @@ En lugar de utilizar issues y milestones, se decidió utilizar Trello para plani
 
 [Planificación de Markdown-links-finder](https://trello.com/b/pvkuiubD/markdown-links)
 
-##NPM
+## NPM
 
 [Markdown-links-finder](https://www.npmjs.com/package/markdown-links-finder)
 
-##Autor
+## Autor
 
 `Carolina Lstra Cofré`
 
