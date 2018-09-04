@@ -109,7 +109,7 @@ En lugar de utilizar issues y milestones, se decidió utilizar Trello para plani
 
 ## Autor
 
-`Carolina Lstra Cofré`
+`Carolina Lastra Cofré`
 
 
 
